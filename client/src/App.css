@@ -31,3 +31,41 @@
     transform: rotate(360deg);
   }
 }
+
+.players-list {
+  margin: 50px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.player-card {
+  width: 300px;
+  padding: 5px;
+  margin: 5px;
+  border: 2px solid dodgerblue;
+  border-radius: 10px;
+  background-color: whitesmoke;
+}
+
+.search-form {
+  margin-top: 20px;
+}
+
+.dark-mode-toggle {
+  border: 1px solid red;
+  color: red;
+  width: 100px;
+  height: 20px;
+  margin: 10px;
+}
+
+form * {
+  font-size: 16px;
+  margin: 5px;
+}
+
+/* .dark-mode {
+  background-color: darkslategray;
+} */
