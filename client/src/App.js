@@ -24,21 +24,26 @@ class App extends React.Component {
   componentDidMount() {
     Axios.get('http://localhost:5000/api/players')
       .then( response => {
-        // console.log(response);
         this.setState({ 
           players: [...this.state.players, response.data]
          });
       })
   }
 
-  
+  handleChange = value => {
+    this.setState( {
+      ...this.state,
+      value
+    })
+  }
+
 
   render() {
 
     return (
       <div className="App">
-        <DarkModeToggle />
-        {/* <SearchForm /> */}
+        {/* <DarkModeToggle /> */}
+        <SearchForm handleChange={this.handleChange} state={this.state}/>
         <PlayerList data-testid='player-list' players={this.state.players}/>
       </div>
     );
