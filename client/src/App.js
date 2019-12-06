@@ -15,7 +15,7 @@ class App extends React.Component {
       searchText: {
         name: '',
         country: '',
-        num_searches: '',
+        searches: '',
       }
     }
 
@@ -24,6 +24,7 @@ class App extends React.Component {
   componentDidMount() {
     Axios.get('http://localhost:5000/api/players')
       .then( response => {
+        console.log(response.data);
         this.setState({ 
           players: response.data
          });
@@ -31,14 +32,10 @@ class App extends React.Component {
   }
 
   handleChange = value => {
-    console.log('value: ', value);
-    // console.log({...this.state, searchText: {value}});
     this.setState( {
       ...this.state,
-    //  value
       searchText: value.searchText
     })
-    console.log('searchText: ', this.state.searchText);
   }
 
 
@@ -46,10 +43,10 @@ class App extends React.Component {
 
     return (
       <div className="App">
-      {console.log('searchText: ', this.state.searchText)}
+      {/* {console.log('searchText: ', this.state.searchText)} */}
         {/* <DarkModeToggle /> */}
         <SearchForm handleChange={this.handleChange} state={this.state}/>
-        <PlayerList data-testid='player-list' players={this.state.players}/>
+        <PlayerList data-testid='player-list' players={this.state.players} searchText={this.state.searchText}/>
       </div>
     );
   }

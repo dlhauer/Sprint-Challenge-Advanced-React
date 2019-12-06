@@ -10,17 +10,14 @@ function SearchForm(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log('submit fired')
     props.handleChange({
       searchText: {
         name: name,
         country: country,
-        num_searches: searches
+        searches: searches
       }
   })
-    // console.log(props.state)
   }
-  // console.log(props.state.searchText);
 
   return (
     <form onSubmit={handleSubmit}className='search-form'>

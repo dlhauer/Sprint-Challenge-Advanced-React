@@ -4,7 +4,6 @@ function useInput(initialValue) {
   const [value, setValue] = useState(initialValue);
   const handleChanges = newValue => {
     setValue(newValue);
-    // console.log(newValue);
   };
   return [value, setValue, handleChanges];
 
