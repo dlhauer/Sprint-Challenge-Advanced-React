@@ -2,7 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import PlayerList from './Components/PlayerList';
+import DarkModeToggle from './Components/DarkModeToggle';
 import SearchForm from './Components/SearchForm';
+// import useDarkMode from './Hooks/useDarkMode';
 import Axios from 'axios';
 
 class App extends React.Component {
@@ -16,6 +18,7 @@ class App extends React.Component {
         num_searches: '',
       }
     }
+
   }
 
   componentDidMount() {
@@ -28,18 +31,14 @@ class App extends React.Component {
       })
   }
 
+  
 
   render() {
-    // console.log('Players: ', this.state.players)
+
     return (
       <div className="App">
-        {/* <SearchForm state={this.state}/> */}
-        <div classname='dark-mode-toggle'>
-          <div 
-            onClick={toggleMode}
-            classname={darkMode ? 'toggle toggled' : 'toggle'}/>
-        </div>
-        <PlayerList players={this.state.players}/>
+        <DarkModeToggle />
+        <PlayerList data-testid='player-list' players={this.state.players}/>
       </div>
     );
   }

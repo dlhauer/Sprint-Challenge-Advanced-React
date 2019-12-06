@@ -52,3 +52,16 @@
 .search-form {
   margin-top: 20px;
 }
+
+.dark-mode-toggle {
+  border: 1px solid red;
+  color: red;
+  width: 100px;
+  height: 20px;
+  margin: 10px;
+}
+
+.dark-mode {
+  background-color: darkslategray;
+  /* color: white; */
+}

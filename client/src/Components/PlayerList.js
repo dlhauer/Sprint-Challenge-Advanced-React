@@ -8,7 +8,7 @@ function PlayerList(props) {
     <div className='player-list'>
       {props.players.map( item => (
         item.map( (player, index) => (
-          <PlayerCard key={index} player={player}/>
+          <PlayerCard data-testid='player-card' key={index} player={player}/>
         ))
       ) )}
     </div>
