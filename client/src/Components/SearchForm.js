@@ -18,7 +18,7 @@ function SearchForm(props) {
         num_searches: searches
       }
   })
-    console.log(props.state)
+    // console.log(props.state)
   }
   // console.log(props.state.searchText);
 

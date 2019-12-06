@@ -25,16 +25,20 @@ class App extends React.Component {
     Axios.get('http://localhost:5000/api/players')
       .then( response => {
         this.setState({ 
-          players: [...this.state.players, response.data]
+          players: response.data
          });
       })
   }
 
   handleChange = value => {
+    console.log('value: ', value);
+    // console.log({...this.state, searchText: {value}});
     this.setState( {
       ...this.state,
-      value
+    //  value
+      searchText: value.searchText
     })
+    console.log('searchText: ', this.state.searchText);
   }
 
 
@@ -42,6 +46,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
+      {console.log('searchText: ', this.state.searchText)}
         {/* <DarkModeToggle /> */}
         <SearchForm handleChange={this.handleChange} state={this.state}/>
         <PlayerList data-testid='player-list' players={this.state.players}/>

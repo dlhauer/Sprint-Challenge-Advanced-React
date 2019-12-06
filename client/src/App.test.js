@@ -10,8 +10,8 @@ import { render } from '@testing-library/react';
 // });
 
 test('PlayerList renders', () => {
-  const {getByTestId} = render(<App />);
-  getByTestId('player-list');
+  const {queryAllByTestId} = render(<App />);
+  queryAllByTestId('player-list');
 })
 
 test('PlayerCards render', () => {
