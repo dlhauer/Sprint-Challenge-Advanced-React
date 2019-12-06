@@ -3,7 +3,7 @@ import PlayerCard from './PlayerCard';
 
 
 function PlayerList(props) {
-  console.log('Players in PlayerList: ', props.players);
+  // console.log('Players in PlayerList: ', props.players);
   return (
     <div className='player-list'>
       {props.players.map( item => (

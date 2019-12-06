@@ -13,7 +13,7 @@ function DarkModeToggle() {
   return (
     <div className='dark-mode-toggle'>
       <div 
-        onClick={ () => alert('hi')}
+        onClick={toggleMode}
         className={darkMode ? 'toggle toggled' : 'toggle'}/>
         {/* Hello */}
     </div>

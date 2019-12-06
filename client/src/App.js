@@ -38,6 +38,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <DarkModeToggle />
+        {/* <SearchForm /> */}
         <PlayerList data-testid='player-list' players={this.state.players}/>
       </div>
     );
