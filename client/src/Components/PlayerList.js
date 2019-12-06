@@ -3,12 +3,14 @@ import PlayerCard from './PlayerCard';
 
 
 function PlayerList(props) {
-  console.log(props.players.length);
+  console.log('Players in PlayerList: ', props.players);
   return (
     <div className='player-list'>
-      {props.players.map( (player, index) => (
-        <PlayerCard key={index} player={player}/>
-      ))}
+      {props.players.map( item => (
+        item.map( (player, index) => (
+          <PlayerCard key={index} player={player}/>
+        ))
+      ) )}
     </div>
   );
 }

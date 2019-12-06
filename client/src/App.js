@@ -27,11 +27,18 @@ class App extends React.Component {
          });
       })
   }
+
+
   render() {
-    console.log('Players: ', this.state.players)
+    // console.log('Players: ', this.state.players)
     return (
       <div className="App">
-        <SearchForm/>
+        {/* <SearchForm state={this.state}/> */}
+        <div classname='dark-mode-toggle'>
+          <div 
+            onClick={toggleMode}
+            classname={darkMode ? 'toggle toggled' : 'toggle'}/>
+        </div>
         <PlayerList players={this.state.players}/>
       </div>
     );

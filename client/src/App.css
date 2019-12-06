@@ -31,3 +31,24 @@
     transform: rotate(360deg);
   }
 }
+
+.player-list {
+  margin: 50px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.player-card {
+  width: 300px;
+  padding: 5px;
+  margin: 5px;
+  border: 2px solid dodgerblue;
+  border-radius: 10px;
+  background-color: whitesmoke;
+}
+
+.search-form {
+  margin-top: 20px;
+}
